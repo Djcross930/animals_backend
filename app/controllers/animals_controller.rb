@@ -17,4 +17,14 @@ def create
   animal.save
   render json: animal.as_json
 end
+
+def update
+  animal = Animal.find_by(id: params[:id])
+  animal.species = params[:species] || animal.species
+  animal.age = params[:age] || animal.age
+  animal.save
+  render json: animal.as_json
+
+
+end
 end
