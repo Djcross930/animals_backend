@@ -1,5 +1,14 @@
 
-http://localhost:3000/animals
+GET http://localhost:3000/animals
 
 ###
-http://localhost:3000/animals/1
+GET http://localhost:3000/animals/1
+
+###
+POST http://localhost:3000/animals
+Content-Type: application/json
+
+{
+  "species": "dinosaur",
+  "age": 100
+}

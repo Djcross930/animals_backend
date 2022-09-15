@@ -8,4 +8,13 @@ def show
   render json: animal.as_json
 
 end
+
+
+def create
+  animal = Animal.new
+  animal.species = params[:species]
+  animal.age = params[:age]
+  animal.save
+  render json: animal.as_json
+end
 end
