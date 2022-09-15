@@ -20,3 +20,6 @@ Content-Type: application/json
 {
   "species": "The Doggy"
 }
+###
+
+DELETE http://localhost:3000/animals/1

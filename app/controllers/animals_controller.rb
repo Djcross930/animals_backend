@@ -24,7 +24,11 @@ def update
   animal.age = params[:age] || animal.age
   animal.save
   render json: animal.as_json
+end
 
-
+def destroy
+  animal = Animal.find_by(id: params[:id])
+  animal.destroy
+  render json: {message: "Thing destroyed"}
 end
 end
